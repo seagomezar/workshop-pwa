@@ -1,14 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Family Finances
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding="">
+  <ion-card (click)="displayAccountList()">
+    <ion-card-header>
+      <ion-card-title>{{ fullBalance | currency }}</ion-card-title>
+      <ion-card-subtitle>Balance</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-button (click)="displayExpenseForm()">Add movement</ion-button>
 </ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      New Movement
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <form (ngSubmit)="saveMovement()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="movement.name"
+        name="name"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="movement.balance"
+        name="balance"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea
+        [(ngModel)]="movement.description"
+        name="description"
+      ></ion-textarea>
+    </ion-item>
+    <ion-button ion-button type="submit" block>Add Movement</ion-button>
+  </form>
+</ion-content>

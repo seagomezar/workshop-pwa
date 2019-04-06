@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Accounts
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="">
+  <ion-list>
+    <ion-item *ngFor="let account of accounts">
+      <ion-label text-wrap="">
+        <h2>{{ account.name }}</h2>
+        <strong>{{ account.balance | currency }}</strong>
+
+        {{ account.description }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
